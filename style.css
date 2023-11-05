@@ -6,7 +6,7 @@ font-family: "Roboto", sans-serif; */
 
 body {
   margin: 0;
-  background: url("anime.jpg") fixed;
+  background: url("./images/anime.jpg") fixed;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -18,8 +18,8 @@ body {
 .back-container button {
   border-radius: 20px;
   background-color: #7dc3f4;
-  padding: 10px 20px 10px;
-  font-size: 25px;
+  padding: 5px 10px 5px;
+  font-size: 15px;
   font-family: Arial, sans-serif;
   cursor: pointer;
   border: 0;
@@ -31,16 +31,16 @@ body {
 }
 
 .back-container {
-  width: 20%;
-  margin: 10px;
+  /* width: 20%; */
+  margin: 20px;
   float: left;
 }
 
 .heading {
   text-align: center;
   font-family: Arial, sans-serif;
-  font-size: 50px;
-  margin: 20px 0 0 0;
+  font-size: 30px;
+  margin: 0px 0 0 0;
   padding: 0 10px 10px;
 
   text-transform: capitalize;
@@ -49,11 +49,11 @@ h2 {
   margin: 0;
 }
 .pluss {
-  margin: 20px;
+  margin: 15px;
   float: left;
-  font-size: 40px;
+  font-size: 20px;
   border: 2px;
-  padding: 5px 15px;
+  padding: 5px 25px;
   border-radius: 20px;
   background-color: #82bbf5;
   color: white;
@@ -61,9 +61,10 @@ h2 {
 .plus-second {
   margin: 20px;
   width: 30px;
-  font-size: 40px;
+  font-size: 20px;
   border: 2px;
   padding: 5px 15px;
+  text-align: center;
   border-radius: 20px;
   background-color: #82bbf5;
   color: #8e3ef7;
@@ -76,8 +77,8 @@ p {
   font-size: 1.2rem;
 }
 #weather {
-  padding: 20px;
-  margin: 20px 20px 20px 200px;
+  padding: 10px;
+  margin: 10px 10px 10px 100px;
   text-align: center;
 }
 
@@ -96,7 +97,7 @@ label {
   display: inline;
 }
 .location-input {
-  margin-top: 300px;
+  margin-top: 250px;
 }
 .location-input-second {
   margin-top: 200px;
@@ -105,37 +106,37 @@ label {
   border-radius: 20px 0 0 20px;
   border: 2px solid #ccc;
   background-color: #e6e1e1;
-  padding: 25px;
+  padding: 15px 10px;
   outline: none;
   text-align: center;
   width: 40%;
   vertical-align: middle;
   position: relative;
-  margin-left: 460px;
+  margin-left: 350px;
   float: left;
   font-family: "Public Sans", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .plus-input-button {
   border-radius: 20px 0 0 20px;
   border: 2px solid #ccc;
   background-color: #e6e1e1;
-  padding: 25px 300px 19px 300px;
+  padding: 15px 170px 15px 170px;
   outline: none;
   text-align: center;
   font-family: "Public Sans", sans-serif;
-  font-size: 25px;
+  font-size: 15px;
   vertical-align: middle;
   position: relative;
-  margin-left: 410px;
+  margin-left: 380px;
   float: left;
 }
 .location-input .button {
-  padding: 20px 40px 27px 40px;
+  padding: 18px 30px 18px 20px;
   background: #2196f3;
   color: white;
-  font-size: 30px;
+  font-size: 15px;
   border-left: none;
   cursor: pointer;
   border-radius: 0 20px 20px 0;
@@ -146,14 +147,14 @@ label {
 .location-input .button :hover {
   background: #0b7dda;
 }
-h2 span {
+/* h2 span {
   font-size: 3rem;
   cursor: pointer;
-}
+} */
 
 .day5 {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   padding: 0px 10px 10px;
   margin: 10px 0 10px;
   font-family: arial, sans-serif;
@@ -171,56 +172,58 @@ span {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 550px 550px;
 }
 
 .date-field {
   text-align: center;
 }
 #date-field-container {
-  width: 400px;
-  height: 100%;
-  padding: 20px;
-  margin: 20px 20px 20px 200px;
+  /* width: 400px; */
+  /* height: 100%; */
+  padding: 10px;
+  margin: 20px 20px 20px 20px;
   text-align: center;
   font-family: Arial, sans-serif;
 }
 #date-field-container h2 {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #date-field-container sup {
-  font-size: 20px;
+  font-size: 10px;
   font-weight: bolder;
 }
 
 .weather_data sup {
-  font-size: 25px;
+  font-size: 15px;
   font-weight: bolder;
 }
 #date-field-container h3 {
   font-size: 20px;
+  margin: 10px 0;
 }
 
 #date-field-container h4 {
   font-size: 20px;
   padding: 0 0 0 10px;
   text-align: center;
+  margin: 15px 0;
 }
 .temp {
-  font-size: 50px;
+  font-size: 30px;
   margin: 0;
-  font-family: "Open Sans";
+  font-family: Arial, sans-serif;
 }
 
 .wdesc {
-  font-size: 40px;
+  font-size: 30px;
   margin: 5px 0 5px;
-  font-family: "Open Sans";
+  font-family: Arial, sans-serif;
 }
 .boradcast-grid-container {
   display: grid;
-  grid-template-columns: 300px 300px 300px 300px 300px;
+  grid-template-columns: 200px 200px 200px 200px 200px;
   margin: 0px 20px 0px 200px;
   padding: 3px;
   text-align: center;
@@ -230,7 +233,7 @@ span {
 
 .broadcast-grid-item {
   padding: 5px 15px;
-  font-size: 20px;
+  font-size: 15px;
   font-family: Arial, sans-serif;
   text-align: center;
   border: 2px solid F8F0E5;
@@ -241,6 +244,15 @@ span {
   cursor: pointer;
 }
 
+.broadcast-grid-item h4 {
+  margin: 5px 5px 3px;
+  padding: 3px;
+}
+.broadcast-grid-item h3 {
+  margin: 10px 5px 0;
+  padding: 3px;
+  font-size: 15px;
+}
 .boradcast-grid-container :hover {
   background-color: #f1fc93;
 }
@@ -268,7 +280,7 @@ span {
 .broadcast-details-display-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0px 20px 0px 20px;
+  /* margin: 0px 20px 0px 20px; */
 }
 
 .broadcast-display-grid-item {
@@ -283,29 +295,41 @@ span {
 }
 
 .span-ele {
-  font-size: 70px;
+  font-size: 50px;
   height: 100%;
   width: 50%;
 }
 .side {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 550px 550px;
   margin: 0;
 }
-
-.image {
-  height: 15%;
-  float: left;
-  flex-shrink: 2;
+.side-grid-item {
+  padding: 5px 15px;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+.side-grid-item img {
+  margin-left: 400px;
 }
 
-.text {
-  font-size: 45px;
+.side-grid-item h1 {
+  margin: 30px 5px 0px;
+  font-size: 60px;
+}
+/* .image {
+  /* height: 10%; 
+  float: left;
+  flex-shrink: 2;
+} */
+
+/* .text {
+  font-size: 30px;
   float: left;
   margin: 0;
   font-family: Arial, sans-serif;
-}
+} */
 
 .current {
   padding: 10px;
@@ -317,7 +341,7 @@ span {
   align-items: center;
   grid-template-columns: 526px 526px;
   column-gap: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .curr-img {
   max-width: 100%;
@@ -325,31 +349,31 @@ span {
 }
 
 .curr-text {
-  font-size: 20px;
-  margin-left: 300px;
+  margin-left: 100px;
 }
 
 .head-h1 {
   float: left;
   text-align: center;
   font-family: Arial, sans-serif;
-  margin-left: 20px;
+  margin-left: 150px;
+  font-size: 20px;
 }
 
 .head-time {
   font-family: Arial, sans-serif;
   text-align: center;
-  width: 50%;
+  font-size: 20px;
+  /* width: 50%; */
 }
 
 .bd-h3 {
-  margin: 25px 0 25px 100px;
-  font-size: 25px;
+  margin: 20px 0 20px 40px;
+  font-size: 20px;
 }
 .bd-h2 {
   margin-left: 350px;
-  font-size: 25px;
-  text-align: center;
+  font-size: 20px;
 }
 
 .sun-moon-container {
@@ -359,16 +383,16 @@ span {
 }
 
 .sun {
-  margin-left: 540px;
+  margin-left: 365px;
 }
 .sunmoon-grid-item .head {
   font-family: Arial, sans-serif;
-  font-size: 25px;
+  font-size: 20px;
 }
 .sunmoon-grid-item h4 {
   font-family: Arial, sans-serif;
-  font-size: 20px;
+  font-size: 17px;
 }
 .moon {
-  margin-left: 115px;
+  margin-left: 55px;
 }

@@ -98,7 +98,7 @@ const renderWeather = function (weatherData) {
   <article id="weather">
   <div class="weather-container" >
   <div class="weather_data grid-item">
-          <img class="weather_img" src="${
+          <img class="weather_img" src="./icons/${
             weatherData.data[0].weather.icon
           }.png"/>
           
@@ -153,12 +153,12 @@ const renderWeather = function (weatherData) {
     .splice(1)
     .reverse()
     .join("/")}</h3>
-    <img class="weather_img" src="${
+    <img class="weather_img" src="./icons/${
       weatherData.data[i].weather.icon
     }.png"/>
-    <h3 class="weather_temp">${Math.round(
+    <h4 class="weather_temp">${Math.round(
       weatherData.data[i].max_temp
-    )}&deg; </h3>
+    )}&deg; </h4>
     <h4 style="text-align: none">${weatherData.data[i].weather.description}</h4>
     </div>
     `;
@@ -258,16 +258,16 @@ const renderWeather = function (weatherData) {
     <h1 class="head-h1"> Current Weather </h1>
     </div>
     <div class="curr-text">
-    <h3 class="head-time"> ${result} </h3>
+    <h1 class="head-time"> ${result} </h1>
     </div>
     </div>
     <div class="side">
     
-    <div class="image">
-    <img  class="disp-img" src="${
+    <div class="side-grid-item image">
+    <img  class="disp-img" src="./icons/${
       weather_data.weather.icon
     }.png"/></div>
-    <div class="text">
+    <div class="side-grid-item text">
     <h1 class="disp-desc">${Math.round(
       weather_data.max_temp
     )}<span ><sup class="span-ele">&deg;</sup></span></h1>
@@ -291,7 +291,7 @@ const renderWeather = function (weatherData) {
 
     broadcastDescription += `
     <div class="broadcast-display-grid-item">
-    <h3 class="bd-h2">RealFeel     &emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
+    <h3 class="bd-h2">RealFeel     &emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
       weather_data.app_max_temp
     )} &deg;</h3>
     <h3 class="bd-h2">Max-Temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
@@ -363,7 +363,7 @@ const plusSymbol = document.querySelector(".plus");
 plusSymbol.addEventListener("click", function () {
   locationInputContainer.style.display = "block";
 
-  // locationInputContainer.classList.add("location-input-second");
+  locationInputContainer.classList.add("location-input-second");
   locInputContainer.classList.remove("location");
   locInputContainer.classList.add("plus-input-button");
   countriesContainer.style.display = "none";
