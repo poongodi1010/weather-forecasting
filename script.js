@@ -98,7 +98,7 @@ const renderWeather = function (weatherData) {
   <article id="weather">
   <div class="weather-container" >
   <div class="weather_data grid-item">
-          <img class="weather_img" src="./icons/${
+          <img class="weather_img" src="${
             weatherData.data[0].weather.icon
           }.png"/>
           
@@ -153,7 +153,7 @@ const renderWeather = function (weatherData) {
     .splice(1)
     .reverse()
     .join("/")}</h3>
-    <img class="weather_img" src="./icons/${
+    <img class="weather_img" src="${
       weatherData.data[i].weather.icon
     }.png"/>
     <h4 class="weather_temp">${Math.round(
@@ -264,7 +264,7 @@ const renderWeather = function (weatherData) {
     <div class="side">
     
     <div class="side-grid-item image">
-    <img  class="disp-img" src="./icons/${
+    <img  class="disp-img" src="${
       weather_data.weather.icon
     }.png"/></div>
     <div class="side-grid-item text">
