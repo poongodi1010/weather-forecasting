@@ -3,6 +3,7 @@
 
 const countriesContainer = document.querySelector(".countries");
 const locationInputContainer = document.querySelector(".location-input");
+let responsiveContainer = document.querySelector(".input-600");
 let locInputContainer = document.querySelector(".location");
 let searchBarContainer = document.querySelector(".button");
 const plusSymbolClass = document.querySelector(".plus");
@@ -26,6 +27,7 @@ let secondContainer = document.querySelector(".second-container");
 let input = document.querySelector("#location");
 locInputContainer.classList.remove("plus-input-button");
 locInputContainer.classList.add("location");
+console.log("responsiveContainer", responsiveContainer);
 //To get city name when user clicks enter from keyboard
 input.addEventListener("keydown", function (e) {
   console.log("event", e);
@@ -45,6 +47,8 @@ let callback = function (city) {
   weather(city);
 };
 
+let width = window.innerWidth;
+console.log("width", width);
 //Real function calls api
 let weaDAta = "";
 const weather = async function (city) {
@@ -95,10 +99,10 @@ const renderWeather = function (weatherData) {
   //to display weather details
   let html = ` 
   
-  <article id="weather">
+  <article id="weather" class="weather600">
   <div class="weather-container" >
   <div class="weather_data grid-item">
-          <img class="weather_img" src="${
+          <img class="weather_img" src="./icons/${
             weatherData.data[0].weather.icon
           }.png"/>
           
@@ -106,7 +110,7 @@ const renderWeather = function (weatherData) {
             <h1 class="temp">${Math.round(
               weatherData.data[0].max_temp
             )} <sup>&#8451;/&#8457;</sup></h1>
-            <h3 class="wdesc">${weatherData.data[0].weather.description} </h3>
+            <p class="wdesc">${weatherData.data[0].weather.description} </p>
             </div>
           
           </div>
@@ -146,22 +150,47 @@ const renderWeather = function (weatherData) {
   let broadCastInsertion = `  `;
 
   for (let i = 0; i < weatherData.data.length; i++) {
-    broadCastInsertion += `
-    <div class="broadcast-grid-item"> 
-  <h3> ${weatherData.data[i].datetime
-    .split("-")
-    .splice(1)
-    .reverse()
-    .join("/")}</h3>
-    <img class="weather_img" src="${
-      weatherData.data[i].weather.icon
-    }.png"/>
-    <h4 class="weather_temp">${Math.round(
-      weatherData.data[i].max_temp
-    )}&deg; </h4>
-    <h4 style="text-align: none">${weatherData.data[i].weather.description}</h4>
-    </div>
-    `;
+    if (width < 767) {
+      broadCastInsertion += `
+      <div class="broadcast-grid-item">
+      <p style="display: inline-block">
+      &nbsp;
+      <span class="date" >
+      ${weatherData.data[i].datetime
+        .split("-")
+        .splice(1)
+        .reverse()
+        .join("/")} &nbsp;
+        </span>
+        <span class="descc"> 
+        ${weatherData.data[i].weather.description} &emsp;&emsp;&emsp;&nbsp;
+        </span>
+        <span class="max">
+        ${Math.round(weatherData.data[i].max_temp)}&deg;
+        </span>
+       
+        </p>
+        </div>
+      
+      `;
+    } else {
+      broadCastInsertion += `
+      <div class="broadcast-grid-item"> 
+    <h3> ${weatherData.data[i].datetime
+      .split("-")
+      .splice(1)
+      .reverse()
+      .join("/")}</h3>
+      <img  src="./icons/${weatherData.data[i].weather.icon}.png"/>
+      <h4 class="weather_temp">${Math.round(
+        weatherData.data[i].max_temp
+      )}&deg; </h4>
+      <h4 style="text-align: none">${
+        weatherData.data[i].weather.description
+      }</h4>
+      </div>
+      `;
+    }
   }
 
   broadCastInsertion += `</div>`;
@@ -188,9 +217,16 @@ const renderWeather = function (weatherData) {
     gridItem[i].addEventListener("click", function (event) {
       console.log("after", gridItem[i]);
       console.log("event ", event);
+      console.log("target", event.target.className);
+
       console.log("226", event.target.parentElement.innerText);
 
-      if (event.target.parentElement.className === "broadcast-grid-item") {
+      if (
+        event.target.parentElement.className === "broadcast-grid-item" ||
+        event.target.className === "descc" ||
+        event.target.className === "max" ||
+        event.target.className === "date"
+      ) {
         let value = event.target.parentElement.innerText;
 
         let str = value.replace(/\s+/g, " ");
@@ -264,7 +300,7 @@ const renderWeather = function (weatherData) {
     <div class="side">
     
     <div class="side-grid-item image">
-    <img  class="disp-img" src="${
+    <img  class="disp-img" src="./icons/${
       weather_data.weather.icon
     }.png"/></div>
     <div class="side-grid-item text">
@@ -288,31 +324,49 @@ const renderWeather = function (weatherData) {
 
     //second part with image and temp
     let broadcastDescription = ``;
+    console.log("314", width);
+    if (width < 767) {
+      console.log("inside less than 600");
+      broadcastDescription += `
+     
+    <div class="broadcast-display-grid-item">
+    <h3 class="bd-h2">RealFeel &emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;${Math.round(
+      weather_data.app_max_temp
+    )} &deg;</h3>
+    <h3 class="bd-h2">Max-Temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;${Math.round(
+      weather_data.max_temp
+    )} &deg;</h3>
+    <h3 class="bd-h2">Min-Temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;${Math.round(
+      weather_data.min_temp
+    )} &deg;</h3>
+    </div>`;
+    } else {
+      console.log("inside great than 600");
+      broadcastDescription += `
+      <div class="broadcast-display-grid-item">
+      <h3 class="bd-h2">RealFeel     &emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
+        weather_data.app_max_temp
+      )} &deg;</h3>
+      <h3 class="bd-h2">Max-Temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
+        weather_data.max_temp
+      )} &deg;</h3>
+      <h3 class="bd-h2">Min-Temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
+        weather_data.min_temp
+      )} &deg;</h3>
+      </div>`;
+    }
 
     broadcastDescription += `
     <div class="broadcast-display-grid-item">
-    <h3 class="bd-h2">RealFeel     &emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
-      weather_data.app_max_temp
-    )} &deg;</h3>
-    <h3 class="bd-h2">Max-Temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
-      weather_data.max_temp
-    )} &deg;</h3>
-    <h3 class="bd-h2">Min-Temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
-      weather_data.min_temp
-    )} &deg;</h3>
-    
-   
-    </div>
-    <div class="broadcast-display-grid-item">
-<h3 class="bd-h3">Pressure &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;${Math.round(
-      weather_data.pres
-    )}mb </h3>
-    <h3 class="bd-h3">Cloud Coverage &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ${
+    <h3 class="bd-h3">Cloud Coverage &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; ${
       weather_data.clouds
     }%</h3>
-    <h3 class="bd-h3">Probbility of Precipitation &emsp;&emsp;${
+    <h3 class="bd-h3">Probbility of Precipitation &emsp;&nbsp;&nbsp;${
       weather_data.pop
     }%</h3>
+    <h3 class="bd-h3">Pressure &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;${Math.round(
+      weather_data.pres
+    )}mb </h3>
     </div>
     `;
     //hthird part to display sun and moon timings
@@ -321,13 +375,13 @@ const renderWeather = function (weatherData) {
     sunmoonDisplay += `
     <div class="sunmoon-grid-item">
     <h3 class="sun head"> Sun Rise / Sun Set</h3>
-<h4 class="sun"> Sunrise &emsp; ${sunriseTimeStamp}&nbsp;AM </h4>
-<h4 class="sun"> Sunset  &emsp;&nbsp; ${sunsetTimeStamp}&nbsp;PM </h4>
+<h4 class="sun"> <span class="rise"> Sunrise </span> &emsp;${sunriseTimeStamp} AM </h4>
+<h4 class="sun"> <span class="rise"> Sunset </span>&emsp; ${sunsetTimeStamp} PM </h4>
     </div>
     <div class="sunmoon-grid-item">
     <h3 class="moon head"> Moon Rise / Moon Set </h3>
-    <h4 class="moon"> Moonrise &emsp; ${moonRiseTimeStamp}&nbsp;PM </h4>
-    <h4 class="moon"> Moonset  &emsp;&nbsp; ${moonsetTimeStamp}&nbsp;AM </h4>
+    <h4 class="moon"> <span class="rise">  Moonrise </span> &emsp; ${moonRiseTimeStamp} PM </h4>
+    <h4 class="moon"> <span class="rise"> Moonset </span> &emsp; ${moonsetTimeStamp} AM </h4>
     </div>
     `;
 
@@ -370,7 +424,7 @@ plusSymbol.addEventListener("click", function () {
   miscContainer.style.display = "none";
   countriesContainer.innerHTML = "";
   dateFieldContainer.innerHTML = "";
-  daysConatiner.innerHTML = "";
+  // daysConatiner.innerHTML = "";
   console.log("innerhtml", locInputContainer);
   console.log("input value", input.value);
   input.value = "";

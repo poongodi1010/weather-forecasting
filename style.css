@@ -6,7 +6,7 @@ font-family: "Roboto", sans-serif; */
 
 body {
   margin: 0;
-  background: url("anime.jpg") fixed;
+  background: url("./images/anime.jpg") fixed;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -159,10 +159,11 @@ label {
   margin: 10px 0 10px;
   font-family: arial, sans-serif;
 }
-span {
-  opacity: 0.7;
+/* span {
   font-size: 20px;
-}
+  width: 80px;
+  display: inline-block;
+} */
 
 .sun-heading,
 .moon-heading {
@@ -238,7 +239,7 @@ span {
   text-align: center;
   border: 2px solid F8F0E5;
   border-radius: 50px;
-  width: 60%;
+  width: 80%;
   height: 100%;
   background-color: #f1fad4;
   cursor: pointer;
@@ -349,7 +350,7 @@ span {
 }
 
 .curr-text {
-  margin-left: 100px;
+  margin-left: 250px;
 }
 
 .head-h1 {
@@ -365,6 +366,7 @@ span {
   text-align: center;
   font-size: 20px;
   /* width: 50%; */
+  margin-left: 150px;
 }
 
 .bd-h3 {
@@ -387,12 +389,311 @@ span {
 }
 .sunmoon-grid-item .head {
   font-family: Arial, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
 }
 .sunmoon-grid-item h4 {
   font-family: Arial, sans-serif;
-  font-size: 17px;
+  font-size: 20px;
 }
 .moon {
   margin-left: 55px;
+}
+
+/* //Responsive designs */
+/* Extra small devices- Mobiles with max width of 600px */
+@media only screen and (max-width: 600px) {
+  body {
+    overflow: visible;
+  }
+
+  .input-600 {
+    margin-top: 200px;
+  }
+  .loc600 {
+    border-radius: 20px 0 0 20px;
+    border: 2px solid #ccc;
+    background-color: #e6e1e1;
+    padding: 10px 10px;
+    outline: none;
+    text-align: center;
+    /* width: 40%; */
+    width: 160px;
+    height: 15px;
+    vertical-align: middle;
+    margin-left: 80px;
+    float: left;
+    font-family: "Public Sans", sans-serif;
+    font-size: 10px;
+  }
+
+  .location-input .button {
+    padding: 14px 20px 14px 20px;
+    background: #2196f3;
+    color: white;
+    font-size: 10px;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    float: left;
+    text-align: center;
+  }
+
+  .plus-600 {
+    margin: 10px 15px 15px;
+    /* float: left; */
+    font-size: 10px;
+    border: 2px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: #82bbf5;
+    color: white;
+  }
+  .flex600 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .country600,
+  .date-field-600 {
+    flex: 100%;
+  }
+
+  #weather {
+    padding: 0px;
+    margin: 5px 10px 10px 20px;
+    text-align: center;
+    width: 60%;
+  }
+  .weather_img {
+    width: 40%;
+    margin-left: 30px;
+  }
+  .temp {
+    font-size: 60px;
+    margin: 0 10px 0 30px;
+    padding: 0 0 0 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  .wdesc {
+    font-size: 19px;
+    margin: 5px 0 0 30px;
+    font-family: Arial, sans-serif;
+  }
+
+  #date-field-container {
+    /* width: 400px; */
+    /* height: 100%; */
+    padding: 0;
+    margin: 10px 0 0 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 60%;
+  }
+  #date-field-container h2 {
+    display: none;
+  }
+
+  #date-field-container sup {
+    display: none;
+  }
+  .heading {
+    font-size: 15px;
+    margin-left: 50px;
+  }
+  .weather_data sup {
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  #date-field-container h3 {
+    display: none;
+  }
+
+  #date-field-container h4 {
+    display: none;
+  }
+  .day5 {
+    text-align: center;
+    font-size: 15px;
+    padding: 0px;
+    width: 50%;
+    margin: 10px 0 10px 100px;
+    font-family: arial, sans-serif;
+    text-align: center;
+  }
+  .boradcast-grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 10px;
+  }
+  .broadcast-grid-item {
+    flex: 100%;
+    margin: 10px;
+    width: 239px;
+    /* height: 17px; */
+    /* text-align: justify; */
+    text-align: left;
+  }
+  .date,
+  .descc,
+  .max {
+    font-size: 14px;
+    opacity: 1;
+    display: inline-block;
+  }
+  .broadcast-grid-item p .descc {
+    width: 250px;
+    /* height: 16px; */
+  }
+  .broadcast-grid-item p {
+    margin: 0;
+    font-size: 14px;
+    /* padding: 0 0 15px 0; */
+    font-family: Arial, sans-serif;
+    /* width: 180px; */
+    /* height: 16px; */
+    width: 340px;
+  }
+  /* .resp-image {
+    width: 8%;
+  }
+
+  #text {
+    padding: 0 0 15px 0;
+  } */
+  .back-container {
+    /* width: 20%; */
+    margin: 12px 10px 10px;
+    float: left;
+  }
+  .head-h1 {
+    margin: 0 0 0 30px;
+    font-size: 15px;
+  }
+  .curr-container {
+    margin-top: 10px;
+    display: flex;
+  }
+  .curr-text {
+    margin-left: 110px;
+  }
+  .head-time {
+    font-size: 11px;
+    margin-left: 10px;
+  }
+
+  .side {
+    display: flex;
+  }
+  .side-grid-item {
+    padding: 0;
+    margin: 0;
+  }
+  .disp-img {
+    float: left;
+    margin-left: 70px;
+    width: 60%;
+  }
+  .disp-desc {
+    margin: 5px 0 0;
+    font-size: 10px;
+  }
+  .side-grid-item img {
+    margin-left: 70px;
+    width: 70px;
+    height: 70px;
+  }
+  .side-grid-item h1 {
+    font-size: 50px;
+    margin: 5px 0 0;
+  }
+  .span-ele {
+    font-size: 30px;
+  }
+
+  .broadcast-details-display-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* text-align: center; */
+  }
+
+  .broadcast-display-grid-item {
+    padding: 3px;
+    flex: 100%;
+  }
+  .bd-h2 {
+    margin: 15px 0 15px 80px;
+    font-size: 15px;
+  }
+  .bd-h3 {
+    font-size: 15px;
+    margin: 15px 0 15px 80px;
+  }
+  .sun-moon-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* .sun {
+    margin-left: 20px;
+    font-size: 15px;
+  } */
+  .sun-heading,
+  .moon-heading {
+    margin: 5px 0 5px;
+  }
+  .sunmoon-grid-item .head {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+  }
+  .sunmoon-grid-item h4 {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    margin: 15px 0 15px 80px;
+  }
+  .sunmoon-grid-item h3 {
+    font-size: 15px;
+    margin: 15px 0 15px 80px;
+  }
+  .rise {
+    width: 200px;
+    display: inline-block;
+    font-size: 15px;
+    opacity: 1;
+    font-family: Arial, sans-serif;
+  }
+  .sunmoon-grid-item {
+    flex: 100%;
+  }
+  /* .sunmoon-grid-item {
+  } */
+  .plus-second {
+    margin: 20px;
+    width: 30px;
+    font-size: 20px;
+    border: 2px;
+    padding: 5px 15px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #82bbf5;
+    color: #8e3ef7;
+  }
+  .back-container button {
+    border-radius: 20px;
+    background-color: #7dc3f4;
+    padding: 5px 10px 5px;
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    border: 0;
+    text-align: center;
+  }
 }
