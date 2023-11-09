@@ -6,7 +6,7 @@ font-family: "Roboto", sans-serif; */
 
 body {
   margin: 0;
-  background: url("anime.jpg") fixed;
+  background: url("./images/anime.jpg") fixed;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -81,7 +81,7 @@ p {
 }
 #weather {
   padding: 10px;
-  margin: 10px 10px 10px 0;
+  margin: 10px 10px 10px 40px;
   /* text-align: center; */
 }
 
@@ -226,6 +226,7 @@ label {
   width: 300px;
   font-family: Arial, sans-serif;
   text-align: center;
+  font-weight: bolder;
 }
 .boradcast-grid-container {
   display: grid;
@@ -408,7 +409,7 @@ label {
 }
 .weather_img {
   margin-left: 180px;
-  width: 25%;
+  width: 20%;
 }
 
 /* //Responsive designs */
