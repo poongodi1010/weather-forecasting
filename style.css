@@ -6,7 +6,7 @@ font-family: "Roboto", sans-serif; */
 
 body {
   margin: 0;
-  background: url("anime.jpg") fixed;
+  background: url("./images/anime.jpg") fixed;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -49,12 +49,15 @@ h2 {
   margin: 0;
 }
 .pluss {
-  margin: 15px;
+  margin: 20px;
   float: left;
   font-size: 20px;
   border: 2px;
-  padding: 5px 25px;
+  padding: 5px 15px;
   border-radius: 20px;
+  text-align: center;
+  height: 23px;
+  width: 30px;
   background-color: #82bbf5;
   color: white;
 }
@@ -78,8 +81,8 @@ p {
 }
 #weather {
   padding: 10px;
-  margin: 10px 10px 10px 100px;
-  text-align: center;
+  margin: 10px 10px 10px 0;
+  /* text-align: center; */
 }
 
 label {
@@ -212,15 +215,17 @@ label {
   margin: 15px 0;
 }
 .temp {
-  font-size: 30px;
-  margin: 0;
+  font-size: 40px;
+  margin: 0 0 0 190px;
   font-family: Arial, sans-serif;
 }
 
 .wdesc {
-  font-size: 30px;
-  margin: 5px 0 5px;
+  font-size: 20px;
+  margin: 10px 0 0 80px;
+  width: 300px;
   font-family: Arial, sans-serif;
+  text-align: center;
 }
 .boradcast-grid-container {
   display: grid;
@@ -294,7 +299,10 @@ label {
 .bd-h {
   tab-size: 16;
 }
-
+.bd {
+  width: 280px;
+  display: inline-block;
+}
 .span-ele {
   font-size: 50px;
   height: 100%;
@@ -374,7 +382,7 @@ label {
   font-size: 20px;
 }
 .bd-h2 {
-  margin-left: 350px;
+  margin-left: 270px;
   font-size: 20px;
 }
 
@@ -385,7 +393,7 @@ label {
 }
 
 .sun {
-  margin-left: 365px;
+  margin-left: 285px;
 }
 .sunmoon-grid-item .head {
   font-family: Arial, sans-serif;
@@ -398,10 +406,14 @@ label {
 .moon {
   margin-left: 55px;
 }
+.weather_img {
+  margin-left: 180px;
+  width: 25%;
+}
 
 /* //Responsive designs */
 /* Extra small devices- Mobiles with max width of 600px */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   body {
     overflow: visible;
   }
@@ -439,12 +451,15 @@ label {
   }
 
   .plus-600 {
-    margin: 10px 15px 15px;
+    margin: 5px;
     /* float: left; */
     font-size: 10px;
     border: 2px;
-    padding: 5px 15px;
+    padding: 5px;
     border-radius: 20px;
+    width: 30px;
+    text-align: center;
+    height: 11px;
     background-color: #82bbf5;
     color: white;
   }
@@ -453,7 +468,7 @@ label {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    text-align: center;
+    /* text-align: center; */
   }
   .country600,
   .date-field-600 {
@@ -463,24 +478,27 @@ label {
   #weather {
     padding: 0px;
     margin: 5px 10px 10px 20px;
-    text-align: center;
+
     width: 60%;
   }
   .weather_img {
     width: 40%;
-    margin-left: 30px;
+    margin-left: 100px;
   }
   .temp {
     font-size: 60px;
-    margin: 0 10px 0 30px;
-    padding: 0 0 0 30px;
+    margin: 0 10px 0 80px;
+    padding: 0 0 0 0px;
     text-align: center;
     font-family: Arial, sans-serif;
   }
 
   .wdesc {
     font-size: 19px;
-    margin: 5px 0 0 30px;
+    font-weight: bolder;
+    margin: 5px 0 0 0px;
+    width: 300px;
+
     font-family: Arial, sans-serif;
   }
 
@@ -502,7 +520,7 @@ label {
   }
   .heading {
     font-size: 15px;
-    margin-left: 50px;
+    margin-left: 85px;
   }
   .weather_data sup {
     font-size: 15px;
@@ -548,7 +566,7 @@ label {
     display: inline-block;
   }
   .broadcast-grid-item p .descc {
-    width: 250px;
+    width: 240px;
     /* height: 16px; */
   }
   .broadcast-grid-item p {
@@ -631,12 +649,16 @@ label {
     flex: 100%;
   }
   .bd-h2 {
-    margin: 15px 0 15px 80px;
+    margin: 15px 0 15px 55px;
     font-size: 15px;
+  }
+  .bd {
+    width: 250px;
+    display: inline-block;
   }
   .bd-h3 {
     font-size: 15px;
-    margin: 15px 0 15px 80px;
+    margin: 15px 0 15px 55px;
   }
   .sun-moon-container {
     display: flex;
@@ -657,11 +679,11 @@ label {
   .sunmoon-grid-item h4 {
     font-family: Arial, sans-serif;
     font-size: 15px;
-    margin: 15px 0 15px 80px;
+    margin: 15px 0 15px 55px;
   }
   .sunmoon-grid-item h3 {
     font-size: 15px;
-    margin: 15px 0 15px 80px;
+    margin: 15px 0 15px 55px;
   }
   .rise {
     width: 200px;
@@ -676,11 +698,11 @@ label {
   /* .sunmoon-grid-item {
   } */
   .plus-second {
-    margin: 20px;
+    margin: 5px;
     width: 30px;
-    font-size: 20px;
+    font-size: 10px;
     border: 2px;
-    padding: 5px 15px;
+    padding: 5px 0;
     text-align: center;
     border-radius: 20px;
     background-color: #82bbf5;

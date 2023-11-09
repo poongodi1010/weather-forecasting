@@ -102,7 +102,7 @@ const renderWeather = function (weatherData) {
   <article id="weather" class="weather600">
   <div class="weather-container" >
   <div class="weather_data grid-item">
-          <img class="weather_img" src="${
+          <img class="weather_img" src="./icons/${
             weatherData.data[0].weather.icon
           }.png"/>
           
@@ -181,7 +181,7 @@ const renderWeather = function (weatherData) {
       .splice(1)
       .reverse()
       .join("/")}</h3>
-      <img  src="${weatherData.data[i].weather.icon}.png"/>
+      <img  src="./icons/${weatherData.data[i].weather.icon}.png"/>
       <h4 class="weather_temp">${Math.round(
         weatherData.data[i].max_temp
       )}&deg; </h4>
@@ -300,7 +300,7 @@ const renderWeather = function (weatherData) {
     <div class="side">
     
     <div class="side-grid-item image">
-    <img  class="disp-img" src="${
+    <img  class="disp-img" src="./icons/${
       weather_data.weather.icon
     }.png"/></div>
     <div class="side-grid-item text">
@@ -330,13 +330,13 @@ const renderWeather = function (weatherData) {
       broadcastDescription += `
      
     <div class="broadcast-display-grid-item">
-    <h3 class="bd-h2">RealFeel &emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;${Math.round(
+    <h3 class="bd-h2"><span class="bd">RealFeel</span>${Math.round(
       weather_data.app_max_temp
     )} &deg;</h3>
-    <h3 class="bd-h2">Max-Temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;${Math.round(
+    <h3 class="bd-h2"><span class="bd">Max-Temp</span>${Math.round(
       weather_data.max_temp
     )} &deg;</h3>
-    <h3 class="bd-h2">Min-Temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;${Math.round(
+    <h3 class="bd-h2"><span class="bd">Min-Temp</span>${Math.round(
       weather_data.min_temp
     )} &deg;</h3>
     </div>`;
@@ -344,13 +344,13 @@ const renderWeather = function (weatherData) {
       console.log("inside great than 600");
       broadcastDescription += `
       <div class="broadcast-display-grid-item">
-      <h3 class="bd-h2">RealFeel     &emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
+      <h3 class="bd-h2"><span class="bd">RealFeel</span>${Math.round(
         weather_data.app_max_temp
       )} &deg;</h3>
-      <h3 class="bd-h2">Max-Temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
+      <h3 class="bd-h2"><span class="bd">Max-Temp</span>${Math.round(
         weather_data.max_temp
       )} &deg;</h3>
-      <h3 class="bd-h2">Min-Temp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${Math.round(
+      <h3 class="bd-h2"><span class="bd">Min-Temp</span>${Math.round(
         weather_data.min_temp
       )} &deg;</h3>
       </div>`;
@@ -358,15 +358,15 @@ const renderWeather = function (weatherData) {
 
     broadcastDescription += `
     <div class="broadcast-display-grid-item">
-    <h3 class="bd-h3">Cloud Coverage &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; ${
+    <h3 class="bd-h3"><span class="bd">Cloud Coverage</span>${
       weather_data.clouds
     }%</h3>
-    <h3 class="bd-h3">Probbility of Precipitation &emsp;&nbsp;&nbsp;${
+    <h3 class="bd-h3"><span class="bd">Probbility of Precipitation</span>${
       weather_data.pop
     }%</h3>
-    <h3 class="bd-h3">Pressure &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;${Math.round(
+    <h3 class="bd-h3"><span class="bd">Pressure</span>${Math.round(
       weather_data.pres
-    )}mb </h3>
+    )} mb </h3>
     </div>
     `;
     //hthird part to display sun and moon timings
@@ -375,13 +375,13 @@ const renderWeather = function (weatherData) {
     sunmoonDisplay += `
     <div class="sunmoon-grid-item">
     <h3 class="sun head"> Sun Rise / Sun Set</h3>
-<h4 class="sun"> <span class="rise"> Sunrise </span> &emsp;${sunriseTimeStamp} AM </h4>
-<h4 class="sun"> <span class="rise"> Sunset </span>&emsp; ${sunsetTimeStamp} PM </h4>
+<h4 class="sun"><span class="bd">Sunrise</span>${sunriseTimeStamp} AM </h4>
+<h4 class="sun"><span class="bd">Sunset</span>${sunsetTimeStamp} PM </h4>
     </div>
     <div class="sunmoon-grid-item">
     <h3 class="moon head"> Moon Rise / Moon Set </h3>
-    <h4 class="moon"> <span class="rise">  Moonrise </span> &emsp; ${moonRiseTimeStamp} PM </h4>
-    <h4 class="moon"> <span class="rise"> Moonset </span> &emsp; ${moonsetTimeStamp} AM </h4>
+    <h4 class="moon"><span class="bd">Moonrise</span>${moonRiseTimeStamp} PM </h4>
+    <h4 class="moon"><span class="bd">Moonset</span>${moonsetTimeStamp} AM </h4>
     </div>
     `;
 
