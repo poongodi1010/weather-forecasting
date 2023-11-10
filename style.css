@@ -6,7 +6,7 @@ font-family: "Roboto", sans-serif; */
 
 body {
   margin: 0;
-  background: url("anime.jpg") fixed;
+  background: url("./images/anime.jpg") fixed;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -1056,7 +1056,7 @@ label {
     width: 160px;
     height: 15px;
     vertical-align: middle;
-    margin-left: 45px;
+    margin-left: 55px;
     float: left;
     font-family: "Public Sans", sans-serif;
     font-size: 10px;
@@ -1107,14 +1107,14 @@ label {
   }
   .weather_img {
     width: 40%;
-    margin-left: 100px;
+    margin-left: 80px;
   }
   .temp {
     font-size: 60px;
     margin: 0 10px 0 0px;
     padding: 0 0 0 0px;
     text-align: center;
-    width: 300px;
+    width: 280px;
     font-family: Arial, sans-serif;
   }
 
@@ -1122,7 +1122,7 @@ label {
     font-size: 20px;
     font-weight: bolder;
     margin: 5px 0 0 0px;
-    width: 300px;
+    width: 260px;
     text-align: center;
     font-family: Arial, sans-serif;
   }
@@ -1164,8 +1164,8 @@ label {
     text-align: center;
     font-size: 17px;
     padding: 0px;
-    width: 320px;
-    margin: 10px 0 10px 8px;
+    width: 310px;
+    margin: 10px 0 10px 0px;
     font-family: arial, sans-serif;
     text-align: center;
   }
