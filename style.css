@@ -6,7 +6,7 @@ font-family: "Roboto", sans-serif; */
 
 body {
   margin: 0;
-  background: url("anime.jpg") fixed;
+  background: url("./images/anime.jpg") fixed;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -418,7 +418,9 @@ label {
   body {
     overflow: visible;
   }
-
+  .boradcast-grid-container :hover {
+    background-color: #f1fc93;
+  }
   .input-600 {
     margin-top: 200px;
   }
@@ -433,7 +435,7 @@ label {
     width: 160px;
     height: 15px;
     vertical-align: middle;
-    margin-left: 80px;
+    margin-left: 100px;
     float: left;
     font-family: "Public Sans", sans-serif;
     font-size: 10px;
@@ -484,11 +486,11 @@ label {
   }
   .weather_img {
     width: 90px;
-    margin-left: 100px;
+    margin-left: 110px;
   }
   .temp {
     font-size: 60px;
-    margin: 0 10px 0 80px;
+    margin: 0 10px 0 90px;
     padding: 0 0 0 0px;
     width: 150px;
     text-align: center;
@@ -511,7 +513,7 @@ label {
     margin: 10px 0 0 0px;
     text-align: center;
     font-family: Arial, sans-serif;
-    width: 60%;
+    width: 350px;
   }
   #date-field-container h2 {
     display: none;
@@ -521,8 +523,9 @@ label {
     display: none;
   }
   .heading {
-    font-size: 15px;
-    margin-left: 85px;
+    font-size: 13px;
+    margin-left: 15px;
+    width: 280px;
   }
   .weather_data sup {
     font-size: 15px;
@@ -537,9 +540,9 @@ label {
   }
   .day5 {
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
     padding: 0px;
-    width: 400px;
+    width: 410px;
     margin: 10px 0 10px 0px;
     font-family: arial, sans-serif;
     text-align: center;
@@ -726,7 +729,9 @@ label {
   body {
     overflow: visible;
   }
-
+  .boradcast-grid-container :hover {
+    background-color: #f1fc93;
+  }
   .input-600 {
     margin-top: 200px;
   }
@@ -1034,7 +1039,9 @@ label {
   body {
     overflow: visible;
   }
-
+  .boradcast-grid-container :hover {
+    background-color: #f1fc93;
+  }
   .input-600 {
     margin-top: 200px;
   }
@@ -1100,14 +1107,14 @@ label {
   }
   .weather_img {
     width: 40%;
-    margin-left: 70px;
+    margin-left: 100px;
   }
   .temp {
     font-size: 60px;
-    margin: 0 10px 0 50px;
+    margin: 0 10px 0 0px;
     padding: 0 0 0 0px;
     text-align: center;
-    width: 150px;
+    width: 300px;
     font-family: Arial, sans-serif;
   }
 
@@ -1115,7 +1122,7 @@ label {
     font-size: 20px;
     font-weight: bolder;
     margin: 5px 0 0 0px;
-    width: 220px;
+    width: 300px;
     text-align: center;
     font-family: Arial, sans-serif;
   }
@@ -1138,9 +1145,9 @@ label {
   }
   .heading {
     font-size: 15px;
-    margin-left: 10px;
+    margin-left: 0px;
     padding: 0;
-    width: 200px;
+    width: 240px;
   }
   .weather_data sup {
     font-size: 15px;
@@ -1155,10 +1162,10 @@ label {
   }
   .day5 {
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
     padding: 0px;
-    width: 310px;
-    margin: 10px 0 10px 0px;
+    width: 320px;
+    margin: 10px 0 10px 8px;
     font-family: arial, sans-serif;
     text-align: center;
   }
@@ -1194,11 +1201,11 @@ label {
   .broadcast-grid-item p {
     margin: 0;
     font-size: 14px;
-    /* padding: 0 0 15px 0; */
+    padding: 0 0 0px 5px;
     font-family: Arial, sans-serif;
     /* width: 180px; */
     /* height: 16px; */
-    width: 340px;
+    width: 290px;
   }
   /* .resp-image {
     width: 8%;
@@ -1281,7 +1288,7 @@ label {
   }
   .bd-h3 {
     font-size: 12px;
-    margin: 15px 0 15px 30px;
+    margin: 15px 0 15px 35px;
   }
   .sun-moon-container {
     display: flex;
