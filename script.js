@@ -53,7 +53,7 @@ console.log("width", width);
 let weaDAta = "";
 const weather = async function (city) {
   const weatherRes = await fetch(
-    `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=24a3428d07e04f0ab8af403e9f7d806b&days=5`
+    `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=92eba9a868854aa2bb2ca802a7b1bb45&days=5`
   );
   console.log("17", weaDAta);
   weaDAta = await weatherRes.json();
